@@ -131,7 +131,7 @@
     .map-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
     .map-actions .button { min-height: 50px; }
     .map-terms { margin: 17px 0 0; color: rgba(184,192,210,.72); font-size: .67rem; }
-    .map-preview { position: relative; min-height: 390px; aspect-ratio: 1.15 / 1; overflow: hidden; border: 1px solid rgba(85,220,224,.42); border-radius: 9px; background: linear-gradient(135deg, #10223b, #0a0f1c 68%, #18223b); box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 0 25px rgba(85,220,224,.08); }
+    .map-preview { display: block; position: relative; min-height: 390px; aspect-ratio: 1.15 / 1; overflow: hidden; border: 1px solid rgba(85,220,224,.42); border-radius: 9px; background: linear-gradient(135deg, #10223b, #0a0f1c 68%, #18223b); box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 0 25px rgba(85,220,224,.08); cursor: pointer; }
     .map-preview img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; transition: transform .7s ease; }
     .map-preview:hover img { transform: scale(1.035); }
     .map-preview::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(9,12,22,.06), transparent 40%, rgba(9,12,22,.78)); }
@@ -377,7 +377,7 @@
         <a href="#carte">Carte</a>
         <a href="#editions">Boutique</a>
       </nav>
-      <a class="header-cta" href="#editions">Comparer les offres <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="header-cta" href="https://link.amazon/B0hcXghGV" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir GTA 6 ↗ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     </div>
   </header>
@@ -401,7 +401,7 @@
         <p class="count-note" id="countNote">Sortie confirmée · PS5 &amp; Xbox Series X|S · heure locale indicative</p>
         <div class="hero-actions">
           <a class="button button--pink" href="#carte">Explorer Leonida <span aria-hidden="true">→</span></a>
-          <a class="button button--outline" href="#editions">Comparer les offres</a>
+          <a class="button button--amazon" href="https://link.amazon/B0hcXghGV" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir GTA 6 sur Amazon ↗</a>
         </div>
         <p class="hero-meta"><strong>PS5</strong> &nbsp;·&nbsp; <strong>Xbox Series X|S</strong> &nbsp;·&nbsp; aucun lancement PC annoncé</p>
       </div>
@@ -425,14 +425,14 @@
           </div>
           <p class="map-terms">Aperçu visuel original pour le site — il ne représente pas une carte officielle de Rockstar Games.</p>
         </div>
-        <div class="map-preview" id="mapPreview">
+        <a class="map-preview" id="mapPreview" href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la carte communautaire interactive de Leonida">
           <img id="mapPreviewImage" src="assets/leonida-map-preview.jpg" alt="Aperçu cartographique communautaire illustré de Leonida, avec régions, routes et marqueurs" loading="lazy">
           <div class="map-fallback" id="mapPreviewFallback" hidden aria-label="Illustration cartographique de secours">
             <svg viewBox="0 0 500 330" fill="none" aria-hidden="true"><path d="M208 17c28 19 68 22 91 44 26 25 31 59 59 77 26 17 61 14 80 37 21 26 12 67-10 91-24 26-61 27-93 25-35-2-67-4-96 11-31 16-57 37-92 28-32-8-52-37-65-67-13-29-16-57-38-79-18-19-52-34-51-62 1-29 37-50 66-49 33 1 61 29 91 18 25-9 34-56 58-74Z" fill="rgba(85,220,224,.08)" stroke="#55DCE0" stroke-width="2"/><path d="M105 96c56 21 72 56 88 93 21 49 56 57 119 79M203 28c-3 37 16 63 50 82 38 21 77 31 97 73M81 202c44-11 78 7 109 34" stroke="#55DCE0" stroke-opacity=".7" stroke-width="2" stroke-dasharray="6 8"/><circle cx="356" cy="174" r="7" fill="#FFB36B"/><circle cx="197" cy="222" r="6" fill="#FFB36B"/></svg>
             <p class="micro">Aperçu de carte indisponible — utilisez le lien communautaire.</p>
           </div>
-          <div class="map-preview-caption"><div><span>Community map · concept preview</span><strong class="city-name">LEONIDA / 26° N</strong></div><span class="map-stamp">Fan-made</span></div>
-        </div>
+          <div class="map-preview-caption"><div><span>Community map · concept preview</span><strong class="city-name">LEONIDA / 26° N</strong></div><span class="map-stamp">Fan-made · cliquer pour explorer ↗</span></div>
+        </a>
       </div>
     </section>
 
@@ -482,59 +482,59 @@
         <div class="platform-grid">
           <article class="platform-card">
             <div class="platform-icon" aria-hidden="true"><svg viewBox="0 0 80 110" fill="none"><path d="M24 6c4-2 8-2 12 0v96c-4 3-8 4-12 3V6Z" fill="currentColor" opacity=".24"/><path d="M36 8c5 0 9 4 9 9v87c-3 4-5 6-9 7V8Z" fill="currentColor" opacity=".9"/><path d="M24 15c-1 10-1 17 0 25M46 27c8 3 14 10 17 18M27 105c-2 1-5 1-7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="platform-copy"><span class="platform-label">Console · PlayStation</span><h3>PlayStation 5</h3><p>GTA VI arrive sur PS5. Vérifiez l’édition, la disponibilité et le prix au moment de l’achat.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+PS5" data-amazon-query="Grand Theft Auto VI PS5" data-affiliate-key="gta6_ps5" target="_blank" rel="noopener noreferrer">Comparer sur Amazon.fr ↗</a></div></div>
+            <div class="platform-copy"><span class="platform-label">Console · PlayStation</span><h3>PlayStation 5</h3><p>GTA VI arrive sur PS5. Vérifiez l’édition, la disponibilité et le prix au moment de l’achat.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+PS5" data-amazon-query="Grand Theft Auto VI PS5" data-affiliate-key="gta6_ps5" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div></div>
           </article>
           <article class="platform-card">
             <div class="platform-icon" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M34 19c-8 0-15 7-19 18l-7 24c-3 11 8 18 17 12l13-9h31l13 9c9 6 20-1 17-12l-7-24c-4-11-11-18-19-18H34Z" stroke="currentColor" stroke-width="5"/><path d="M30 37v20M20 47h20M70 39h.1M79 50h.1" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="70" cy="39" r="4" fill="currentColor"/><circle cx="79" cy="50" r="4" fill="currentColor"/></svg></div>
-            <div class="platform-copy"><span class="platform-label">Console · Xbox</span><h3>Xbox Series X|S</h3><p>Comparez les offres Xbox Series X|S et les conditions de vente de votre région.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+Xbox+Series+X" data-amazon-query="Grand Theft Auto VI Xbox Series X" data-affiliate-key="gta6_xbox" target="_blank" rel="noopener noreferrer">Comparer sur Amazon.fr ↗</a></div></div>
+            <div class="platform-copy"><span class="platform-label">Console · Xbox</span><h3>Xbox Series X|S</h3><p>Comparez les offres Xbox Series X|S et les conditions de vente de votre région.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+Xbox+Series+X" data-amazon-query="Grand Theft Auto VI Xbox Series X" data-affiliate-key="gta6_xbox" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div></div>
           </article>
         </div>
         <p class="box-code-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7.8 7.5 4.3 7.5-4.3M12 12.1v8.3" stroke="currentColor" stroke-width="1.7"/></svg><span><strong>Version boîte — à savoir :</strong> l’édition physique annoncée contient un code de téléchargement dans la boîte, sans disque. Vérifiez le format et les conditions du vendeur avant l’achat. <a class="source-link" href="https://www.rockstargames.com/newswire/article/5171972o3ak5oa/pre-order-grand-theft-auto-vi-on-june-25" target="_blank" rel="noopener noreferrer">Annonce Rockstar ↗</a></span></p>
 
         <div class="setup-block" id="setup">
-          <div class="setup-block-head"><div><span class="eyebrow">Sélection Amazon · équipements</span><h3>Les essentiels de ton setup.</h3></div><p>Les prix affichés proviennent des captures Amazon.fr et peuvent changer. Les boutons ouvrent la fiche dédiée lorsqu’un lien validé est fourni, sinon une recherche Amazon.fr. Vérifie le vendeur, le prix final et la livraison avant achat.</p></div>
+          <div class="setup-block-head"><div><span class="eyebrow">Sélection Amazon · équipements</span><h3>Les essentiels de ton setup.</h3></div><p>Les prix affichés proviennent des captures Amazon.fr et peuvent changer. Les boutons ouvrent directement les fiches Amazon.fr affiliées. Vérifie le vendeur, le prix final et la livraison avant achat.</p></div>
           <div class="selected-product-grid" id="selectedProducts" aria-label="Produits et recherches Amazon.fr sélectionnés">
             <article class="selected-product-card" id="offer-ps5-standard">
               <div class="selected-product-visual"><img src="assets/products/ps5-standard.png" alt="Console PlayStation 5 Standard avec lecteur de disque et manette DualSense" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Console · PlayStation</span><h4>PlayStation 5 Standard 1 To</h4><p class="selected-product-description">Lecteur Blu-ray 4K · 1 manette DualSense.</p><p class="selected-product-price"><strong>649,99 €</strong></p><a class="button button--outline" href="https://link.amazon/B0jcEEZxr" data-amazon-query="Sony PlayStation 5 Standard 1TB disc drive console" data-affiliate-key="ps5_standard" target="_blank" rel="sponsored nofollow noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Console · PlayStation</span><h4>PlayStation 5 Standard 1 To</h4><p class="selected-product-description">Lecteur Blu-ray 4K · 1 manette DualSense.</p><p class="selected-product-price"><strong>649,99 €</strong></p><a class="button button--outline" href="https://link.amazon/B0jcEEZxr" data-amazon-query="Sony PlayStation 5 Standard 1TB disc drive console" data-affiliate-key="ps5_standard" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-xbox-series-s">
               <div class="selected-product-visual"><img src="assets/products/xbox-series-s.png" alt="Console Xbox Series S blanche avec manette" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Console · Xbox</span><h4>Xbox Series S 1 To</h4><p class="selected-product-description">Robot White · capacité 1 To, d’après la capture fournie.</p><p class="selected-product-price"><strong>549,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xbox+Series+S+1TB+Robot+White+console" data-amazon-query="Xbox Series S 1TB Robot White console" data-affiliate-key="xbox_series_s" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Console · Xbox</span><h4>Xbox Series S 1 To</h4><p class="selected-product-description">Robot White · capacité 1 To, d’après la capture fournie.</p><p class="selected-product-price"><strong>549,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xbox+Series+S+1TB+Robot+White+console" data-amazon-query="Xbox Series S 1TB Robot White console" data-affiliate-key="xbox_series_s" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-fc27">
               <div class="selected-product-visual"><img src="assets/products/fc27-xbox.jpg" alt="Pochette EA SPORTS FC 27 pour Xbox Series X, issue de la capture fournie" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Jeu · Xbox Series X</span><h4>EA SPORTS FC 27</h4><p class="selected-product-description">Édition Standard · disque · français.</p><p class="selected-product-price"><strong>40,39 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=EA+SPORTS+FC+27+Xbox+Series+X+disc+French" data-amazon-query="EA SPORTS FC 27 Xbox Series X disc French" data-affiliate-key="fc27" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Jeu · Xbox Series X</span><h4>EA SPORTS FC 27</h4><p class="selected-product-description">Édition Standard · disque · français.</p><p class="selected-product-price"><strong>40,39 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=EA+SPORTS+FC+27+Xbox+Series+X+disc+French" data-amazon-query="EA SPORTS FC 27 Xbox Series X disc French" data-affiliate-key="fc27" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-dualsense">
               <div class="selected-product-visual"><img src="assets/products/dualsense-camouflage.jpg" alt="Manette DualSense PlayStation 5 en camouflage" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Manette · PS5 / PC</span><h4>DualSense camouflage</h4><p class="selected-product-description">Manette sans fil · compatible PS5 et PC.</p><p class="selected-product-price"><strong>59,90 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=PlayStation+5+DualSense+camouflage+controller+PC" data-amazon-query="PlayStation 5 DualSense camouflage controller PC" data-affiliate-key="dualsense_camo" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Manette · PS5 / PC</span><h4>DualSense camouflage</h4><p class="selected-product-description">Manette sans fil · compatible PS5 et PC.</p><p class="selected-product-price"><strong>59,90 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=PlayStation+5+DualSense+camouflage+controller+PC" data-amazon-query="PlayStation 5 DualSense camouflage controller PC" data-affiliate-key="dualsense_camo" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-xiaomi-tv">
               <div class="selected-product-visual"><img src="assets/products/xiaomi-tv-32.jpg" alt="Téléviseur Xiaomi HD de 32 pouces" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Écran · salon</span><h4>Xiaomi TV 32 pouces</h4><p class="selected-product-description">HD · Fire TV · caractéristiques selon la fiche vendeur.</p><p class="selected-product-price"><strong>139,00 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xiaomi+32+inch+HD+Smart+TV+Fire+TV" data-amazon-query="Xiaomi 32 inch HD Smart TV Fire TV" data-affiliate-key="xiaomi_tv" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Écran · salon</span><h4>Xiaomi TV 32 pouces</h4><p class="selected-product-description">HD · Fire TV · caractéristiques selon la fiche vendeur.</p><p class="selected-product-price"><strong>139,00 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xiaomi+32+inch+HD+Smart+TV+Fire+TV" data-amazon-query="Xiaomi 32 inch HD Smart TV Fire TV" data-affiliate-key="xiaomi_tv" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-msi-monitor">
               <div class="selected-product-visual"><img src="assets/products/msi-mag-276cfa.jpg" alt="Écran gaming incurvé MSI MAG de 27 pouces" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Écran gaming · PC / console</span><h4>MSI MAG 276CFA E20</h4><p class="selected-product-description">27 pouces · FHD · dalle VA · jusqu’à 200 Hz, selon la capture.</p><p class="selected-product-price"><strong>113,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=MSI+MAG+276CFA+E20+27+inch+gaming+monitor" data-amazon-query="MSI MAG 276CFA E20 27 inch gaming monitor" data-affiliate-key="msi_monitor" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Écran gaming · PC / console</span><h4>MSI MAG 276CFA E20</h4><p class="selected-product-description">27 pouces · FHD · dalle VA · jusqu’à 200 Hz, selon la capture.</p><p class="selected-product-price"><strong>113,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=MSI+MAG+276CFA+E20+27+inch+gaming+monitor" data-amazon-query="MSI MAG 276CFA E20 27 inch gaming monitor" data-affiliate-key="msi_monitor" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-turtle-beach">
               <div class="selected-product-visual"><img src="assets/products/turtle-beach-recon-50p.jpg" alt="Casque gaming Turtle Beach Recon 50P" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque filaire</span><h4>Turtle Beach Recon 50P</h4><p class="selected-product-description">Compatibilité annoncée : PS4, PS5, Xbox et PC.</p><p class="selected-product-price"><strong>14,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Turtle+Beach+Recon+50P+wired+gaming+headset+PS5+Xbox+PC" data-amazon-query="Turtle Beach Recon 50P wired gaming headset PS5 Xbox PC" data-affiliate-key="turtle_beach" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque filaire</span><h4>Turtle Beach Recon 50P</h4><p class="selected-product-description">Compatibilité annoncée : PS4, PS5, Xbox et PC.</p><p class="selected-product-price"><strong>14,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Turtle+Beach+Recon+50P+wired+gaming+headset+PS5+Xbox+PC" data-amazon-query="Turtle Beach Recon 50P wired gaming headset PS5 Xbox PC" data-affiliate-key="turtle_beach" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-oivo-charger">
               <div class="selected-product-visual"><img src="assets/products/oivo-ps5-charger.jpg" alt="Station OIVO pour recharger deux manettes DualSense PS5" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Accessoire · recharge</span><h4>Chargeur OIVO PS5</h4><p class="selected-product-description">Station de recharge pour deux manettes PS5.</p><p class="selected-product-price"><strong>15,98 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=OIVO+PS5+controller+charger+dual+charging+station" data-amazon-query="OIVO PS5 controller charger dual charging station" data-affiliate-key="oivo_charger" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Accessoire · recharge</span><h4>Chargeur OIVO PS5</h4><p class="selected-product-description">Station de recharge pour deux manettes PS5.</p><p class="selected-product-price"><strong>15,98 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=OIVO+PS5+controller+charger+dual+charging+station" data-amazon-query="OIVO PS5 controller charger dual charging station" data-affiliate-key="oivo_charger" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-nubwo-headset">
               <div class="selected-product-visual"><img src="assets/products/nubwo-g06-pro-charging.jpg" alt="Casque NUBWO G06 Pro avec station de charge" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque avec station</span><h4>NUBWO G06 Pro</h4><p class="selected-product-description">Casque sans fil et station de charge, selon la fiche fournie.</p><p class="selected-product-price"><strong>79,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=NUBWO+G06+Pro+wireless+gaming+headset+charging+station" data-amazon-query="NUBWO G06 Pro wireless gaming headset charging station" data-affiliate-key="nubwo_headset" target="_blank" rel="noopener noreferrer">Rechercher sur Amazon.fr ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque avec station</span><h4>NUBWO G06 Pro</h4><p class="selected-product-description">Casque sans fil et station de charge, selon la fiche fournie.</p><p class="selected-product-price"><strong>79,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=NUBWO+G06+Pro+wireless+gaming+headset+charging+station" data-amazon-query="NUBWO G06 Pro wireless gaming headset charging station" data-affiliate-key="nubwo_headset" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
             </article>
           </div>
           <div class="affiliate-disclosure" aria-label="Information sur les liens Amazon.fr près des produits sélectionnés">
             <p class="amazon-line">As an Amazon Associate I earn from qualifying purchases.</p>
             <p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
-            <p class="micro">Le lien de suivi fourni pour la PS5 Standard peut générer une commission. Les autres boutons de cette sélection ouvrent des recherches Amazon.fr génériques non affiliées.</p>
+            <p class="micro">Les boutons de cette sélection sont des liens d’affiliation Amazon.fr et peuvent générer une commission.</p>
           </div>
         </div>
       </div>
@@ -552,7 +552,7 @@
         <div class="affiliate-disclosure" aria-label="Information sur les liens Amazon.fr près des classiques">
           <p class="amazon-line">As an Amazon Associate I earn from qualifying purchases.</p>
           <p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
-          <p class="micro">Les liens de suivi fournis pour GTA V, la Trilogie et Red Dead Redemption 2 peuvent générer une commission.</p>
+          <p class="micro">Les boutons de cette section sont des liens d’affiliation Amazon.fr et peuvent générer une commission.</p>
         </div>
       </div>
     </section>
@@ -577,7 +577,7 @@
         <div>
           <p class="legal-highlight">As an Amazon Associate I earn from qualifying purchases.</p>
           <p>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
-          <p class="legal-note">Les liens de suivi fournis pour la PS5 Standard, GTA V, la Trilogie et Red Dead Redemption 2 peuvent générer une commission. Les autres recherches génériques sont non affiliées. Les prix affichés peuvent évoluer.</p>
+          <p class="legal-note">Les boutons d’achat de ce site sont des liens d’affiliation Amazon.fr et peuvent générer une commission. Les prix affichés peuvent évoluer.</p>
         </div>
       </div>
       <div class="footer-bottom"><span>© 2026 · Fan project · VICE CITY AFTER DARK</span><a href="#accueil">Retour en haut ↑</a></div>
@@ -586,30 +586,29 @@
 
   <div class="mobile-bar" aria-label="Accès rapide aux précommandes">
     <div class="mobile-count"><strong id="mobileDays">J−--</strong><span id="mobileLabel">avant la sortie</span></div>
-    <a class="button button--pink" id="mobileCta" href="#editions">Précommander GTA 6 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="button button--pink" id="mobileCta" href="https://link.amazon/B0hcXghGV" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir GTA 6 sur Amazon <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 
   <script>
     // ===== AMAZON.FR / AFFILIATION =====
     // Renseigne ici ton tag Amazon Associates FR lorsqu'il sera disponible.
     const amazonTag = "";
-    // Les URL courtes reçues dans GTA6.txt ont renvoyé HTTP 404; elles sont désactivées.
-    // Les clés vides ouvrent des recherches Amazon.fr jusqu'à réception de liens affiliés valides.
+    // Liens d'affiliation Amazon.fr renseignés depuis GTA6.txt.
     const affiliateUrls = {
-      gta6_ps5: { amazon: "" },
-      gta6_xbox: { amazon: "" },
+      gta6_ps5: { amazon: "https://link.amazon/B0hcXghGV" },
+      gta6_xbox: { amazon: "https://link.amazon/B077bJv8y" },
       gta5: { amazon: "https://link.amazon/B02VVVfVB" },
       trilogy: { amazon: "https://link.amazon/B0fqYjwF9" },
       rdr2: { amazon: "https://link.amazon/B03a5uUMT" },
       ps5_standard: { amazon: "https://link.amazon/B0jcEEZxr" },
-      xbox_series_s: { amazon: "" },
-      fc27: { amazon: "" },
-      dualsense_camo: { amazon: "" },
-      xiaomi_tv: { amazon: "" },
-      msi_monitor: { amazon: "" },
-      turtle_beach: { amazon: "" },
-      oivo_charger: { amazon: "" },
-      nubwo_headset: { amazon: "" }
+      xbox_series_s: { amazon: "https://link.amazon/B0aJIxNk8" },
+      fc27: { amazon: "https://link.amazon/B0dwIVgJU" },
+      dualsense_camo: { amazon: "https://link.amazon/B081PWDme" },
+      xiaomi_tv: { amazon: "https://link.amazon/A0axQMgdH" },
+      msi_monitor: { amazon: "https://link.amazon/B0b9qUWyW" },
+      turtle_beach: { amazon: "https://link.amazon/B0fo3h9tM" },
+      oivo_charger: { amazon: "https://link.amazon/B0b21NoRC" },
+      nubwo_headset: { amazon: "https://link.amazon/B0hjm18SR" }
     };
 
     const launchDate = new Date(2026, 10, 19, 0, 0, 0); // minuit local, repère indicatif
@@ -646,7 +645,7 @@
           <p class="game-price"><span>Prix indicatif Amazon.fr ·</span> <strong>${eur.format(game.price)}</strong><small>${game.priceNote} · relevé le ${game.checked}</small><a class="price-source" href="${game.sourceUrl}" target="_blank" rel="noopener noreferrer">Fiche ${game.source} ↗</a></p>
           <div class="game-badges">${badge}</div>
           <div class="game-buttons">
-            <a class="button button--amazon" data-store="amazon" data-affiliate-key="${game.id}" data-query="${game.amazonQuery}">Voir sur Amazon.fr ↗</a>
+            <a class="button button--amazon" data-store="amazon" data-affiliate-key="${game.id}" data-query="${game.amazonQuery}">Voir sur Amazon ↗</a>
           </div>
         </div>
       </article>`;
@@ -687,7 +686,7 @@
         announcementText.textContent = "Le décompte est terminé. L'exploration commence.";
         mobileDays.textContent = "LIVE";
         mobileLabel.textContent = "explore Leonida";
-        mobileCta.innerHTML = 'Explorer GTA 6 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        mobileCta.innerHTML = 'Voir GTA 6 sur Amazon <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         return;
       }
       countdown.hidden = false;
@@ -703,7 +702,7 @@
       mobileLabel.textContent = days <= 1 ? "avant la sortie" : "jours avant GTA VI";
       announcementText.textContent = "19 NOVEMBRE 2026 · PS5 & XBOX SERIES X|S";
       if (previousPhase !== "before") {
-        mobileCta.innerHTML = 'Précommander GTA 6 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        mobileCta.innerHTML = 'Voir GTA 6 sur Amazon <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       }
       previousPhase = "before";
     }
