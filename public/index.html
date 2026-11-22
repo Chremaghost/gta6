@@ -4,16 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090C16">
-  <meta name="description" content="VICE CITY AFTER DARK — Explore Leonida. Prépare ton arrivée. Redécouvre l'univers GTA. Compte à rebours, carte communautaire et éditions.">
-  <meta property="og:title" content="VICE CITY AFTER DARK">
-  <meta property="og:description" content="Explore Leonida. Prépare ton arrivée. Redécouvre l'univers GTA.">
-  <meta property="og:image" content="assets/vice-city-dusk.jpg">
+  <meta name="description" content="Explorez la carte communautaire de Leonida (GTA 6), comparez les éditions PS5 et Xbox Series X|S, et préparez votre setup écran 4K, console et audio pour Vice City.">
+  <link rel="canonical" href="https://gta6-cyan.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VICE CITY AFTER DARK">
+  <meta property="og:title" content="GTA 6 (Leonida) : Carte, Éditions PS5/Xbox & Setup | Vice City">
+  <meta property="og:description" content="Explorez la carte communautaire de Leonida (GTA 6), comparez les éditions PS5 et Xbox Series X|S, et préparez votre setup pour Vice City.">
+  <meta property="og:url" content="https://gta6-cyan.vercel.app/">
+  <meta property="og:image" content="https://gta6-cyan.vercel.app/assets/vice-city-dusk.webp">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GTA 6 (Leonida) : Carte, Éditions PS5/Xbox & Setup | Vice City">
+  <meta name="twitter:description" content="Explorez la carte communautaire de Leonida (GTA 6), comparez les éditions PS5 et Xbox Series X|S, et préparez votre setup pour Vice City.">
+  <meta name="twitter:image" content="https://gta6-cyan.vercel.app/assets/vice-city-dusk.webp">
   <meta name="google-site-verification" content="Bqch81qwQg7IG5y07_JY2DnF9SU4p4d8jC_fBxD7B8M" />
-  <title>VICE CITY AFTER DARK — Explore Leonida</title>
+  <title>GTA 6 (Leonida) : Carte, Éditions PS5/Xbox &amp; Setup | Vice City</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090C16'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='900' font-size='26' fill='%23FF508B'%3EVC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="assets/vice-city-dusk.webp" fetchpriority="high">
   <style>
     :root {
       color-scheme: dark;
@@ -26,10 +38,26 @@
       --muted: #B8C0D2;
       --line: rgba(205, 218, 242, .14);
       --glass: rgba(24, 34, 59, .84);
-      --display: "Barlow Condensed", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      --body: "Inter", Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --display: "Barlow Condensed", "Barlow Fallback", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      --body: "Inter", "Inter Fallback", Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --content: 1180px;
       --banner-h: 34px;
+    }
+    @font-face {
+      font-family: "Barlow Fallback";
+      src: local("Arial Narrow"), local("Helvetica Neue Condensed"), local("Arial");
+      size-adjust: 92%;
+      ascent-override: 95%;
+      descent-override: 20%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: "Inter Fallback";
+      src: local("Segoe UI"), local("Helvetica Neue"), local("Arial");
+      size-adjust: 100%;
+      ascent-override: 95%;
+      descent-override: 25%;
+      line-gap-override: 0%;
     }
     *, *::before, *::after { box-sizing: border-box; }
     [hidden] { display: none !important; }
@@ -56,7 +84,7 @@
     .button, .header-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 18px; border: 1px solid transparent; border-radius: 5px; font-family: var(--body); font-size: .78rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease; cursor: pointer; }
     .button:hover, .header-cta:hover { transform: translateY(-2px); }
     .button svg, .header-cta svg { width: 16px; height: 16px; flex: 0 0 auto; }
-    .button--pink, .header-cta { background: var(--neon-pink); color: #fff; box-shadow: 0 0 22px rgba(255,80,139,.26); }
+    .button--pink, .header-cta { background: var(--neon-pink); color: #090612; box-shadow: 0 0 22px rgba(255,80,139,.26); font-weight: 800; }
     .button--pink:hover, .header-cta:hover { box-shadow: 0 0 30px rgba(255,80,139,.55); }
     .button--cyan { background: var(--ocean-cyan); border-color: var(--ocean-cyan); color: #07141b; box-shadow: 0 0 22px rgba(85,220,224,.13); }
     .button--cyan:hover { box-shadow: 0 0 28px rgba(85,220,224,.34); }
@@ -92,25 +120,25 @@
 
     /* Hero */
     .hero { min-height: max(760px, 100svh); position: relative; isolation: isolate; display: grid; place-items: center; overflow: hidden; text-align: center; background: var(--midnight); }
-    .hero::before { content: ""; position: absolute; z-index: -2; inset: 0; background: linear-gradient(180deg, rgba(9,12,22,.35) 0%, rgba(9,12,22,.52) 38%, rgba(9,12,22,.91) 91%, var(--midnight) 100%), url("assets/vice-city-dusk.jpg") center 54% / cover no-repeat, linear-gradient(135deg, var(--deep-blue), var(--midnight)); transform: scale(1.01); animation: hero-drift 28s ease-in-out infinite alternate; }
+    .hero::before { content: ""; position: absolute; z-index: -2; inset: 0; background: linear-gradient(180deg, rgba(9,12,22,.35) 0%, rgba(9,12,22,.52) 38%, rgba(9,12,22,.91) 91%, var(--midnight) 100%), url("assets/vice-city-dusk.webp") center 54% / cover no-repeat, linear-gradient(135deg, var(--deep-blue), var(--midnight)); transform: scale(1.01); animation: hero-drift 28s ease-in-out infinite alternate; }
     .hero::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 37%, transparent 0%, rgba(9,12,22,.10) 45%, rgba(9,12,22,.42) 100%); }
     .hero-grid { position: absolute; z-index: -1; inset: 0; opacity: .08; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px); background-size: 78px 78px; mask-image: linear-gradient(transparent 15%, #000 83%); }
-    .hero-content { width: min(900px, calc(100% - 40px)); padding: calc(135px + var(--banner-h)) 0 92px; }
+    .hero-content { width: min(900px, calc(100% - 40px)); min-height: 560px; padding: calc(135px + var(--banner-h)) 0 92px; }
     .hero-kicker { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 28px; padding: 8px 13px; border: 1px solid rgba(255,255,255,.18); border-radius: 99px; color: #eef2fb; background: rgba(12,17,31,.55); font-size: .65rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; backdrop-filter: blur(10px); }
     .hero-kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--neon-pink); box-shadow: 0 0 12px var(--neon-pink); }
     .hero-brand { margin: 0 0 20px; color: #fff; line-height: .82; filter: drop-shadow(0 8px 25px rgba(0,0,0,.45)); }
     .hero-brand small { display: block; margin-bottom: 8px; font-size: clamp(1rem, 2.3vw, 1.55rem); font-weight: 600; letter-spacing: .27em; }
     .hero-brand strong { display: block; font-size: clamp(5rem, 15vw, 10.5rem); font-weight: 800; letter-spacing: -.02em; color: #fff; text-shadow: 0 0 30px rgba(255,80,139,.18); }
-    .hero h1 { margin: 16px 0 9px; font-size: clamp(2rem, 4.4vw, 3.4rem); font-weight: 700; letter-spacing: .02em; line-height: .96; }
+    .hero h1 { margin: 16px 0 9px; min-height: 1em; font-size: clamp(2rem, 4.4vw, 3.4rem); font-weight: 700; letter-spacing: .02em; line-height: .96; }
     .hero-subtitle { margin: 0 auto 7px; color: #fff; font-size: clamp(1rem, 2.1vw, 1.2rem); font-weight: 600; }
     .hero-promise { margin: 0 auto 29px; color: var(--muted); font-size: .83rem; letter-spacing: .01em; }
-    .countdown { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); width: min(700px, 100%); margin: 0 auto 12px; gap: 11px; }
+    .countdown { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); width: min(700px, 100%); min-height: 150px; margin: 0 auto 12px; gap: 11px; }
     .count-unit { min-width: 0; padding: 15px 8px 12px; border: 1px solid rgba(255,255,255,.17); border-radius: 6px; background: rgba(14,19,35,.68); box-shadow: inset 0 0 20px rgba(255,255,255,.025); backdrop-filter: blur(9px); }
-    .count-unit strong { display: block; color: #fff; font-size: clamp(2.7rem, 7vw, 5.3rem); font-weight: 700; line-height: .9; font-variant-numeric: tabular-nums; }
+    .count-unit strong { display: block; min-height: 1em; color: #fff; font-size: clamp(2.7rem, 7vw, 5.3rem); font-weight: 700; line-height: .9; font-variant-numeric: tabular-nums; }
     .count-unit span { display: block; padding-top: 8px; color: var(--ocean-cyan); font-size: .57rem; font-weight: 800; letter-spacing: .17em; }
     .countdown-ended { width: min(700px, calc(100% - 10px)); margin: 0 auto 18px; padding: 17px 20px; border: 1px solid rgba(85,220,224,.48); border-radius: 6px; color: #d9ffff; background: rgba(85,220,224,.09); font-size: 1rem; font-weight: 700; box-shadow: 0 0 22px rgba(85,220,224,.1); }
     .count-note { margin: 0 0 22px; color: rgba(234,238,248,.75); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
-    .hero-actions { display: flex; justify-content: center; gap: 11px; flex-wrap: wrap; }
+    .hero-actions { display: flex; justify-content: center; gap: 11px; flex-wrap: wrap; min-height: 54px; }
     .hero-actions .button { min-height: 52px; padding-inline: 22px; }
     .hero-meta { margin: 18px 0 0; color: rgba(238,241,250,.72); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
     .hero-meta strong { color: #fff; }
@@ -148,7 +176,7 @@
     .discover-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 44px; align-items: center; }
     .trailer-shell { padding: 8px; border: 1px solid rgba(85,220,224,.32); border-radius: 8px; background: rgba(9,12,22,.42); box-shadow: 0 18px 60px rgba(0,0,0,.25); }
     .trailer-frame { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: 4px; background: linear-gradient(135deg,#18223b,#090c16); }
-    .trailer-poster { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; height: 100%; border: 0; color: #fff; cursor: pointer; background: linear-gradient(180deg,rgba(9,12,22,.13),rgba(9,12,22,.72)), url("assets/vice-city-dusk.jpg") center / cover no-repeat, linear-gradient(135deg,#18223b,#090c16); }
+    .trailer-poster { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; height: 100%; border: 0; color: #fff; cursor: pointer; background: linear-gradient(180deg,rgba(9,12,22,.13),rgba(9,12,22,.72)), url("assets/vice-city-dusk.webp") center / cover no-repeat, linear-gradient(135deg,#18223b,#090c16); }
     .trailer-poster::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 48%, transparent, rgba(9,12,22,.28) 76%); }
     .play-button { position: relative; z-index: 1; width: 72px; height: 72px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: var(--neon-pink); box-shadow: 0 0 26px rgba(255,80,139,.42); transition: transform .2s ease, box-shadow .2s ease; }
     .trailer-poster:hover .play-button { transform: scale(1.08); box-shadow: 0 0 38px rgba(255,80,139,.65); }
@@ -158,7 +186,7 @@
     .trailer-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .trailer-caption { display: flex; justify-content: space-between; gap: 12px; padding: 11px 4px 2px; color: var(--muted); font-size: .68rem; }
     .trailer-caption a { color: var(--ocean-cyan); font-weight: 750; }
-    .story-copy h2 { margin: 13px 0 15px; font-size: clamp(2.8rem, 5.2vw, 4.75rem); line-height: .92; }
+    .story-copy h3 { margin: 13px 0 15px; font-size: clamp(2.8rem, 5.2vw, 4.75rem); line-height: .92; }
     .story-copy > p { color: var(--muted); font-size: .9rem; }
     .story-copy strong { color: #fff; }
     .story-signature { margin: 12px 0 0; color: var(--ocean-cyan); font-size: .79rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
@@ -250,16 +278,16 @@
     .footer-top { display: flex; justify-content: space-between; gap: 32px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
     .footer-brand { max-width: 350px; }
     .footer-brand .brand { margin-bottom: 12px; }
-    .footer-brand p { color: var(--muted); font-size: .72rem; }
+    .footer-brand p { color: #d0cae3; font-size: .72rem; }
     .footer-links { display: flex; flex-wrap: wrap; align-content: start; gap: 11px 20px; }
     .footer-links a { color: #d4dbea; font-size: .66rem; font-weight: 750; text-transform: uppercase; letter-spacing: .06em; }
     .footer-links a:hover { color: var(--ocean-cyan); }
-    .legal-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding-top: 22px; color: rgba(184,192,210,.82); font-size: .64rem; }
+    .legal-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding-top: 22px; color: #c9cede; font-size: .64rem; }
     .legal-copy p { margin: 0 0 8px; }
     .legal-copy strong { color: #fff; }
     .legal-highlight { color: #fff; font-weight: 700; }
-    .legal-note { color: rgba(184,192,210,.68); font-size: .59rem; }
-    .footer-bottom { display: flex; justify-content: space-between; gap: 14px; padding-top: 20px; color: rgba(184,192,210,.52); font-size: .56rem; text-transform: uppercase; letter-spacing: .08em; }
+    .legal-note { color: #a9b2c6; font-size: .59rem; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 14px; padding-top: 20px; color: #a9b2c6; font-size: .56rem; text-transform: uppercase; letter-spacing: .08em; }
     .footer-bottom a { color: var(--ocean-cyan); }
     .mobile-bar { display: none; }
     @keyframes hero-drift { from { transform: scale(1.01) translateX(-.35%); } to { transform: scale(1.055) translateX(.45%); } }
@@ -295,7 +323,7 @@
       .hero-brand small { font-size: .9rem; letter-spacing: .18em; }
       .hero h1 { font-size: clamp(1.75rem,8vw,2.7rem); }
       .hero-promise { max-width: 400px; font-size: .74rem; }
-      .countdown { gap: 6px; }
+      .countdown { gap: 6px; min-height: 96px; }
       .count-unit { padding: 12px 4px 9px; }
       .count-unit strong { font-size: clamp(2rem,10vw,3.2rem); }
       .count-unit span { font-size: .47rem; letter-spacing: .1em; }
@@ -308,7 +336,7 @@
       .map-preview img { min-height: 265px; }
       .map-copy h2 { font-size: clamp(2.8rem,12vw,4.6rem); }
       .discover-grid { gap: 28px; }
-      .story-copy h2 { font-size: clamp(3rem,13vw,4.4rem); }
+      .story-copy h3 { font-size: clamp(3rem,13vw,4.4rem); }
       .editions-header { align-items: start; flex-direction: column; }
       .platform-grid { grid-template-columns: 1fr; }
       .platform-card { grid-template-columns: 60px 1fr; gap: 15px; min-height: 205px; padding: 19px 15px; }
@@ -359,6 +387,52 @@
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://gta6-cyan.vercel.app/#website",
+        "url": "https://gta6-cyan.vercel.app/",
+        "name": "VICE CITY AFTER DARK",
+        "alternateName": "GTA 6 — Leonida",
+        "description": "Guide fan de GTA 6 : carte communautaire de Leonida, éditions PS5 et Xbox Series X|S, compte à rebours et sélection de matériel pour votre setup.",
+        "inLanguage": "fr-FR",
+        "publisher": { "@type": "Organization", "name": "VICE CITY AFTER DARK", "url": "https://gta6-cyan.vercel.app/" }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://gta6-cyan.vercel.app/#gta6",
+        "name": "Grand Theft Auto VI",
+        "alternateName": ["GTA 6", "GTA VI"],
+        "url": "https://www.rockstargames.com/VI",
+        "image": "https://gta6-cyan.vercel.app/assets/vice-city-dusk.webp",
+        "datePublished": "2026-11-19",
+        "gamePlatform": ["PlayStation 5", "Xbox Series X|S"],
+        "character": [
+          { "@type": "Person", "name": "Lucia Caminos" },
+          { "@type": "Person", "name": "Jason Duval" }
+        ],
+        "contentLocation": { "@type": "State", "name": "Leonida" },
+        "description": "Nouvelle aventure de Lucia et Jason dans l'État de Leonida, avec Vice City comme point de départ. Sortie le 19 novembre 2026 sur PlayStation 5 et Xbox Series X|S."
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://gta6-cyan.vercel.app/#sections",
+        "name": "Sections du guide GTA 6",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 4,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Explorer la carte de Leonida", "url": "https://gta6-cyan.vercel.app/#carte" },
+          { "@type": "ListItem", "position": 2, "name": "Découvrir GTA VI — Lucia et Jason", "url": "https://gta6-cyan.vercel.app/#le-jeu" },
+          { "@type": "ListItem", "position": 3, "name": "Éditions PS5 et Xbox + setup", "url": "https://gta6-cyan.vercel.app/#editions" },
+          { "@type": "ListItem", "position": 4, "name": "Catalogue des classiques GTA", "url": "https://gta6-cyan.vercel.app/#catalogue" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -376,6 +450,7 @@
         <a href="#le-jeu">Le Jeu</a>
         <a href="#carte">Carte</a>
         <a href="#editions">Boutique</a>
+        <a href="#catalogue">Catalogue</a>
       </nav>
       <a class="header-cta" href="https://link.amazon/B0hcXghGV" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir GTA 6 ↗ <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="siteNav"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
@@ -390,7 +465,7 @@
         <p class="hero-brand" aria-hidden="true"><small>VICE CITY</small><strong>AFTER DARK</strong></p>
         <h1 id="hero-title">WELCOME TO VICE CITY.</h1>
         <p class="hero-subtitle">La prochaine aventure commence ici.</p>
-        <p class="hero-promise">Explore Leonida. Prépare ton arrivée. Redécouvre l'univers GTA.</p>
+        <p class="hero-promise">Explore Leonida, le nouvel État de GTA 6. Prépare ton arrivée entre Vice City, PS5 et Xbox Series X|S.</p>
         <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours jusqu'au 19 novembre 2026">
           <div class="count-unit"><strong id="days">--</strong><span>JOURS</span></div>
           <div class="count-unit"><strong id="hours">--</strong><span>HEURES</span></div>
@@ -414,7 +489,7 @@
           <span class="eyebrow">Section 02 · Exploration communautaire</span>
           <h2 id="map-title">Explorez la carte <span class="gradient-text">de Leonida</span></h2>
           <p class="map-subtitle">Carte communautaire · Repères · Régions · Découvertes</p>
-          <p>Une carte communautaire pour parcourir les lieux repérés, suivre les pistes et organiser vos découvertes autour de Leonida.</p>
+          <p>Une carte communautaire pour parcourir les lieux repérés de Leonida — de Vice City aux routes de l’État — suivre les pistes et organiser vos découvertes avant la sortie de GTA 6.</p>
           <div class="spoiler-warning" role="note">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v5M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             <span><strong>Avertissement spoilers.</strong> Cette carte communautaire non officielle regroupe des repères issus des bandes-annonces, de captures d’écran et de fuites. Certaines informations peuvent être non vérifiées et contenir des spoilers.</span>
@@ -423,10 +498,10 @@
             <a class="button button--cyan" href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer">Explorer la carte de Leonida ↗</a>
             <span class="micro">La carte s’ouvre sur le site communautaire.</span>
           </div>
-          <p class="map-terms">Aperçu visuel original pour le site — il ne représente pas une carte officielle de Rockstar Games.</p>
+          <p class="map-terms">Aperçu visuel original pour le site — il ne représente pas une carte officielle de Rockstar Games. <a class="source-link" href="#le-jeu">Découvrir le jeu</a> · <a class="source-link" href="#editions">Voir les éditions</a> · <a class="source-link" href="#catalogue">Catalogue GTA</a></p>
         </div>
         <a class="map-preview" id="mapPreview" href="https://map.stateofleonida.net/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la carte communautaire interactive de Leonida">
-          <img id="mapPreviewImage" src="assets/leonida-map-preview.jpg" alt="Aperçu cartographique communautaire illustré de Leonida, avec régions, routes et marqueurs" loading="lazy">
+          <img id="mapPreviewImage" src="assets/leonida-map-preview.webp" alt="Aperçu cartographique communautaire illustré de Leonida, avec régions, routes et marqueurs" width="942" height="526" loading="lazy" decoding="async">
           <div class="map-fallback" id="mapPreviewFallback" hidden aria-label="Illustration cartographique de secours">
             <svg viewBox="0 0 500 330" fill="none" aria-hidden="true"><path d="M208 17c28 19 68 22 91 44 26 25 31 59 59 77 26 17 61 14 80 37 21 26 12 67-10 91-24 26-61 27-93 25-35-2-67-4-96 11-31 16-57 37-92 28-32-8-52-37-65-67-13-29-16-57-38-79-18-19-52-34-51-62 1-29 37-50 66-49 33 1 61 29 91 18 25-9 34-56 58-74Z" fill="rgba(85,220,224,.08)" stroke="#55DCE0" stroke-width="2"/><path d="M105 96c56 21 72 56 88 93 21 49 56 57 119 79M203 28c-3 37 16 63 50 82 38 21 77 31 97 73M81 202c44-11 78 7 109 34" stroke="#55DCE0" stroke-opacity=".7" stroke-width="2" stroke-dasharray="6 8"/><circle cx="356" cy="174" r="7" fill="#FFB36B"/><circle cx="197" cy="222" r="6" fill="#FFB36B"/></svg>
             <p class="micro">Aperçu de carte indisponible — utilisez le lien communautaire.</p>
@@ -441,7 +516,7 @@
         <div class="section-head">
           <span class="eyebrow">Section 03 · Découvrir GTA VI</span>
           <h2 id="game-title">Deux destins.<br><span class="gradient-text">Une ville sans frein.</span></h2>
-          <p>Lucia et Jason prennent la route dans Leonida, un état inspiré de la Floride où Vice City n’est qu’un début. Voici les repères confirmés avant le lancement.</p>
+          <p>Lucia et Jason prennent la route dans Leonida, un état inspiré de la Floride où Vice City n’est qu’un début. Voici les repères confirmés avant le lancement. <a class="source-link" href="#carte">Explorer la carte de Leonida</a> · <a class="source-link" href="#editions">Choisir une édition</a></p>
         </div>
         <div class="discover-grid">
           <div class="trailer-shell">
@@ -455,7 +530,7 @@
           </div>
           <div class="story-copy">
             <span class="eyebrow">Lucia · Jason · Leonida</span>
-            <h2>La confiance est une <span class="gradient-text">affaire à deux.</span></h2>
+            <h3>La confiance est une <span class="gradient-text">affaire à deux.</span></h3>
             <p><strong>Lucia Caminos et Jason Duval</strong> sont au cœur de cette nouvelle aventure. Entre Vice City, les petites villes et les routes de Leonida, leur histoire s’inscrit dans un monde façonné par le soleil, les néons et les choix risqués.</p>
             <p class="story-signature">Une nouvelle virée commence.</p>
             <div class="fact-grid" aria-label="Informations confirmées sur GTA VI">
@@ -475,60 +550,60 @@
           <div class="section-head">
             <span class="eyebrow">Section 04 · Préparer ton arrivée</span>
             <h2 id="editions-title">Choisissez votre <span class="gradient-text">édition.</span></h2>
-            <p>Comparez les versions sur les consoles annoncées, puis choisissez le setup qui convient à votre espace et à votre budget.</p>
+            <p>Comparez les versions sur les consoles annoncées — PlayStation 5, Xbox Series X et Xbox Series S — puis choisissez le setup qui convient à votre espace et à votre budget.</p>
           </div>
           <div class="date-stamp"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 19 nov. 2026 · sortie confirmée</div>
         </div>
         <div class="platform-grid">
           <article class="platform-card">
             <div class="platform-icon" aria-hidden="true"><svg viewBox="0 0 80 110" fill="none"><path d="M24 6c4-2 8-2 12 0v96c-4 3-8 4-12 3V6Z" fill="currentColor" opacity=".24"/><path d="M36 8c5 0 9 4 9 9v87c-3 4-5 6-9 7V8Z" fill="currentColor" opacity=".9"/><path d="M24 15c-1 10-1 17 0 25M46 27c8 3 14 10 17 18M27 105c-2 1-5 1-7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="platform-copy"><span class="platform-label">Console · PlayStation</span><h3>PlayStation 5</h3><p>GTA VI arrive sur PS5. Vérifiez l’édition, la disponibilité et le prix au moment de l’achat.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+PS5" data-amazon-query="Grand Theft Auto VI PS5" data-affiliate-key="gta6_ps5" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div></div>
+            <div class="platform-copy"><span class="platform-label">Console · PlayStation</span><h3>PlayStation 5</h3><p>GTA VI arrive sur PS5, compatible avec les setups PS5 Pro. Vérifiez l’édition, la disponibilité et le prix au moment de l’achat.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+PS5" data-amazon-query="Grand Theft Auto VI PS5" data-affiliate-key="gta6_ps5" target="_blank" rel="noopener noreferrer">Voir GTA 6 (PS5) sur Amazon ↗</a></div></div>
           </article>
           <article class="platform-card">
             <div class="platform-icon" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M34 19c-8 0-15 7-19 18l-7 24c-3 11 8 18 17 12l13-9h31l13 9c9 6 20-1 17-12l-7-24c-4-11-11-18-19-18H34Z" stroke="currentColor" stroke-width="5"/><path d="M30 37v20M20 47h20M70 39h.1M79 50h.1" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="70" cy="39" r="4" fill="currentColor"/><circle cx="79" cy="50" r="4" fill="currentColor"/></svg></div>
-            <div class="platform-copy"><span class="platform-label">Console · Xbox</span><h3>Xbox Series X|S</h3><p>Comparez les offres Xbox Series X|S et les conditions de vente de votre région.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+Xbox+Series+X" data-amazon-query="Grand Theft Auto VI Xbox Series X" data-affiliate-key="gta6_xbox" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div></div>
+            <div class="platform-copy"><span class="platform-label">Console · Xbox</span><h3>Xbox Series X|S</h3><p>Comparez les offres Xbox Series X|S et les conditions de vente de votre région.</p><div class="platform-links"><a class="button button--outline" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Éditions officielles ↗</a><a class="button button--amazon" href="https://www.amazon.fr/s?k=Grand+Theft+Auto+VI+Xbox+Series+X" data-amazon-query="Grand Theft Auto VI Xbox Series X" data-affiliate-key="gta6_xbox" target="_blank" rel="noopener noreferrer">Voir GTA 6 (Xbox) sur Amazon ↗</a></div></div>
           </article>
         </div>
         <p class="box-code-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="1.7"/><path d="m4.5 7.8 7.5 4.3 7.5-4.3M12 12.1v8.3" stroke="currentColor" stroke-width="1.7"/></svg><span><strong>Version boîte — à savoir :</strong> l’édition physique annoncée contient un code de téléchargement dans la boîte, sans disque. Vérifiez le format et les conditions du vendeur avant l’achat. <a class="source-link" href="https://www.rockstargames.com/newswire/article/5171972o3ak5oa/pre-order-grand-theft-auto-vi-on-june-25" target="_blank" rel="noopener noreferrer">Annonce Rockstar ↗</a></span></p>
 
         <div class="setup-block" id="setup">
-          <div class="setup-block-head"><div><span class="eyebrow">Sélection Amazon · équipements</span><h3>Les essentiels de ton setup.</h3></div><p>Les prix affichés proviennent des captures Amazon.fr et peuvent changer. Les boutons ouvrent directement les fiches Amazon.fr affiliées. Vérifie le vendeur, le prix final et la livraison avant achat.</p></div>
+          <div class="setup-block-head"><div><span class="eyebrow">Sélection Amazon · équipements</span><h3>Les essentiels de ton setup.</h3></div><p>Les prix affichés proviennent des captures Amazon.fr et peuvent changer. Les boutons ouvrent directement les fiches Amazon.fr affiliées. Pour profiter de Leonida en conditions optimales, privilégiez un écran gaming 4K et une connexion HDMI 2.1 entre console et téléviseur. Vérifie le vendeur, le prix final et la livraison avant achat.</p></div>
           <div class="selected-product-grid" id="selectedProducts" aria-label="Produits et recherches Amazon.fr sélectionnés">
             <article class="selected-product-card" id="offer-ps5-standard">
               <div class="selected-product-visual"><img src="assets/products/ps5-standard.png" alt="Console PlayStation 5 Standard avec lecteur de disque et manette DualSense" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Console · PlayStation</span><h4>PlayStation 5 Standard 1 To</h4><p class="selected-product-description">Lecteur Blu-ray 4K · 1 manette DualSense.</p><p class="selected-product-price"><strong>649,99 €</strong></p><a class="button button--outline" href="https://link.amazon/B0jcEEZxr" data-amazon-query="Sony PlayStation 5 Standard 1TB disc drive console" data-affiliate-key="ps5_standard" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Console · PlayStation</span><h4>PlayStation 5 Standard 1 To</h4><p class="selected-product-description">Lecteur Blu-ray 4K · 1 manette DualSense.</p><p class="selected-product-price"><strong>649,99 €</strong></p><a class="button button--outline" href="https://link.amazon/B0jcEEZxr" data-amazon-query="Sony PlayStation 5 Standard 1TB disc drive console" data-affiliate-key="ps5_standard" target="_blank" rel="sponsored nofollow noopener noreferrer">Voir la PS5 sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-xbox-series-s">
               <div class="selected-product-visual"><img src="assets/products/xbox-series-s.png" alt="Console Xbox Series S blanche avec manette" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Console · Xbox</span><h4>Xbox Series S 1 To</h4><p class="selected-product-description">Robot White · capacité 1 To, d’après la capture fournie.</p><p class="selected-product-price"><strong>549,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xbox+Series+S+1TB+Robot+White+console" data-amazon-query="Xbox Series S 1TB Robot White console" data-affiliate-key="xbox_series_s" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Console · Xbox</span><h4>Xbox Series S 1 To</h4><p class="selected-product-description">Robot White · capacité 1 To, d’après la capture fournie.</p><p class="selected-product-price"><strong>549,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xbox+Series+S+1TB+Robot+White+console" data-amazon-query="Xbox Series S 1TB Robot White console" data-affiliate-key="xbox_series_s" target="_blank" rel="noopener noreferrer">Voir la Xbox Series S sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-fc27">
               <div class="selected-product-visual"><img src="assets/products/fc27-xbox.jpg" alt="Pochette EA SPORTS FC 27 pour Xbox Series X, issue de la capture fournie" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Jeu · Xbox Series X</span><h4>EA SPORTS FC 27</h4><p class="selected-product-description">Édition Standard · disque · français.</p><p class="selected-product-price"><strong>40,39 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=EA+SPORTS+FC+27+Xbox+Series+X+disc+French" data-amazon-query="EA SPORTS FC 27 Xbox Series X disc French" data-affiliate-key="fc27" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Jeu · Xbox Series X</span><h4>EA SPORTS FC 27</h4><p class="selected-product-description">Édition Standard · disque · français.</p><p class="selected-product-price"><strong>40,39 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=EA+SPORTS+FC+27+Xbox+Series+X+disc+French" data-amazon-query="EA SPORTS FC 27 Xbox Series X disc French" data-affiliate-key="fc27" target="_blank" rel="noopener noreferrer">Voir EA Sports FC 27 sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-dualsense">
               <div class="selected-product-visual"><img src="assets/products/dualsense-camouflage.jpg" alt="Manette DualSense PlayStation 5 en camouflage" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Manette · PS5 / PC</span><h4>DualSense camouflage</h4><p class="selected-product-description">Manette sans fil · compatible PS5 et PC.</p><p class="selected-product-price"><strong>59,90 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=PlayStation+5+DualSense+camouflage+controller+PC" data-amazon-query="PlayStation 5 DualSense camouflage controller PC" data-affiliate-key="dualsense_camo" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Manette · PS5 / PC</span><h4>DualSense camouflage</h4><p class="selected-product-description">Manette sans fil · compatible PS5 et PC.</p><p class="selected-product-price"><strong>59,90 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=PlayStation+5+DualSense+camouflage+controller+PC" data-amazon-query="PlayStation 5 DualSense camouflage controller PC" data-affiliate-key="dualsense_camo" target="_blank" rel="noopener noreferrer">Voir la DualSense sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-xiaomi-tv">
               <div class="selected-product-visual"><img src="assets/products/xiaomi-tv-32.jpg" alt="Téléviseur Xiaomi HD de 32 pouces" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Écran · salon</span><h4>Xiaomi TV 32 pouces</h4><p class="selected-product-description">HD · Fire TV · caractéristiques selon la fiche vendeur.</p><p class="selected-product-price"><strong>139,00 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xiaomi+32+inch+HD+Smart+TV+Fire+TV" data-amazon-query="Xiaomi 32 inch HD Smart TV Fire TV" data-affiliate-key="xiaomi_tv" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Écran · salon</span><h4>Xiaomi TV 32 pouces</h4><p class="selected-product-description">HD · Fire TV · caractéristiques selon la fiche vendeur.</p><p class="selected-product-price"><strong>139,00 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Xiaomi+32+inch+HD+Smart+TV+Fire+TV" data-amazon-query="Xiaomi 32 inch HD Smart TV Fire TV" data-affiliate-key="xiaomi_tv" target="_blank" rel="noopener noreferrer">Voir la TV Xiaomi sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-msi-monitor">
               <div class="selected-product-visual"><img src="assets/products/msi-mag-276cfa.jpg" alt="Écran gaming incurvé MSI MAG de 27 pouces" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Écran gaming · PC / console</span><h4>MSI MAG 276CFA E20</h4><p class="selected-product-description">27 pouces · FHD · dalle VA · jusqu’à 200 Hz, selon la capture.</p><p class="selected-product-price"><strong>113,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=MSI+MAG+276CFA+E20+27+inch+gaming+monitor" data-amazon-query="MSI MAG 276CFA E20 27 inch gaming monitor" data-affiliate-key="msi_monitor" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Écran gaming · PC / console</span><h4>MSI MAG 276CFA E20</h4><p class="selected-product-description">27 pouces · FHD · dalle VA · jusqu’à 200 Hz, selon la capture.</p><p class="selected-product-price"><strong>113,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=MSI+MAG+276CFA+E20+27+inch+gaming+monitor" data-amazon-query="MSI MAG 276CFA E20 27 inch gaming monitor" data-affiliate-key="msi_monitor" target="_blank" rel="noopener noreferrer">Voir l'écran MSI sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-turtle-beach">
               <div class="selected-product-visual"><img src="assets/products/turtle-beach-recon-50p.jpg" alt="Casque gaming Turtle Beach Recon 50P" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque filaire</span><h4>Turtle Beach Recon 50P</h4><p class="selected-product-description">Compatibilité annoncée : PS4, PS5, Xbox et PC.</p><p class="selected-product-price"><strong>14,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Turtle+Beach+Recon+50P+wired+gaming+headset+PS5+Xbox+PC" data-amazon-query="Turtle Beach Recon 50P wired gaming headset PS5 Xbox PC" data-affiliate-key="turtle_beach" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque filaire</span><h4>Turtle Beach Recon 50P</h4><p class="selected-product-description">Compatibilité annoncée : PS4, PS5, Xbox et PC.</p><p class="selected-product-price"><strong>14,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=Turtle+Beach+Recon+50P+wired+gaming+headset+PS5+Xbox+PC" data-amazon-query="Turtle Beach Recon 50P wired gaming headset PS5 Xbox PC" data-affiliate-key="turtle_beach" target="_blank" rel="noopener noreferrer">Voir le casque Turtle Beach sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-oivo-charger">
               <div class="selected-product-visual"><img src="assets/products/oivo-ps5-charger.jpg" alt="Station OIVO pour recharger deux manettes DualSense PS5" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Accessoire · recharge</span><h4>Chargeur OIVO PS5</h4><p class="selected-product-description">Station de recharge pour deux manettes PS5.</p><p class="selected-product-price"><strong>15,98 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=OIVO+PS5+controller+charger+dual+charging+station" data-amazon-query="OIVO PS5 controller charger dual charging station" data-affiliate-key="oivo_charger" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Accessoire · recharge</span><h4>Chargeur OIVO PS5</h4><p class="selected-product-description">Station de recharge pour deux manettes PS5.</p><p class="selected-product-price"><strong>15,98 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=OIVO+PS5+controller+charger+dual+charging+station" data-amazon-query="OIVO PS5 controller charger dual charging station" data-affiliate-key="oivo_charger" target="_blank" rel="noopener noreferrer">Voir le chargeur OIVO sur Amazon ↗</a></div>
             </article>
             <article class="selected-product-card" id="offer-nubwo-headset">
               <div class="selected-product-visual"><img src="assets/products/nubwo-g06-pro-charging.jpg" alt="Casque NUBWO G06 Pro avec station de charge" loading="lazy"></div>
-              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque avec station</span><h4>NUBWO G06 Pro</h4><p class="selected-product-description">Casque sans fil et station de charge, selon la fiche fournie.</p><p class="selected-product-price"><strong>79,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=NUBWO+G06+Pro+wireless+gaming+headset+charging+station" data-amazon-query="NUBWO G06 Pro wireless gaming headset charging station" data-affiliate-key="nubwo_headset" target="_blank" rel="noopener noreferrer">Voir sur Amazon ↗</a></div>
+              <div class="selected-product-copy"><span class="selected-product-category">Audio · casque avec station</span><h4>NUBWO G06 Pro</h4><p class="selected-product-description">Casque sans fil et station de charge, selon la fiche fournie.</p><p class="selected-product-price"><strong>79,99 €</strong></p><a class="button button--amazon" href="https://www.amazon.fr/s?k=NUBWO+G06+Pro+wireless+gaming+headset+charging+station" data-amazon-query="NUBWO G06 Pro wireless gaming headset charging station" data-affiliate-key="nubwo_headset" target="_blank" rel="noopener noreferrer">Voir le casque NUBWO sur Amazon ↗</a></div>
             </article>
           </div>
           <div class="affiliate-disclosure" aria-label="Information sur les liens Amazon.fr près des produits sélectionnés">
@@ -545,7 +620,7 @@
         <div class="section-head">
           <span class="eyebrow">Section 05 · Classiques &amp; recherches Amazon.fr</span>
           <h2 id="catalogue-title">Revisitez la légende <span class="gradient-text">GTA.</span></h2>
-          <p>Retrouvez ces classiques sur les éditions indiquées. Les prix affichés sont des repères Amazon.fr et peuvent varier selon le vendeur, la livraison et le stock.</p>
+          <p>Retrouvez ces classiques sur les éditions indiquées. Les prix affichés sont des repères Amazon.fr et peuvent varier selon le vendeur, la livraison et le stock. <a class="source-link" href="#editions">Retour aux éditions GTA 6</a> · <a class="source-link" href="#le-jeu">Le jeu</a></p>
         </div>
         <div class="catalogue-grid" id="gamesGrid" aria-live="polite"></div>
         <p class="catalogue-disclaimer">Prix indicatifs en euros relevés sur les fiches Amazon.fr. Le stock signalé pour la Trilogie (13 exemplaires) peut évoluer; vérifiez le prix, le vendeur et la livraison avant achat.</p>
@@ -645,20 +720,25 @@
           <p class="game-price"><span>Prix indicatif Amazon.fr ·</span> <strong>${eur.format(game.price)}</strong><small>${game.priceNote} · relevé le ${game.checked}</small><a class="price-source" href="${game.sourceUrl}" target="_blank" rel="noopener noreferrer">Fiche ${game.source} ↗</a></p>
           <div class="game-badges">${badge}</div>
           <div class="game-buttons">
-            <a class="button button--amazon" data-store="amazon" data-affiliate-key="${game.id}" data-query="${game.amazonQuery}">Voir sur Amazon ↗</a>
+            <a class="button button--amazon" data-store="amazon" data-affiliate-key="${game.id}" data-query="${game.amazonQuery}">Voir ${game.title} sur Amazon ↗</a>
           </div>
         </div>
       </article>`;
     }
-    document.getElementById("gamesGrid").innerHTML = PRODUCT_DATA.map(productCard).join("");
+    // Non-critical catalogue + affiliate wiring deferred to the next frame.
+    requestAnimationFrame(() => {
+      const fragment = document.createElement("template");
+      fragment.innerHTML = PRODUCT_DATA.map(productCard).join("");
+      document.getElementById("gamesGrid").replaceChildren(fragment.content);
 
-    document.querySelectorAll("[data-store]").forEach((anchor) => {
-      const key = anchor.dataset.affiliateKey;
-      const query = anchor.dataset.query;
-      setOutboundLink(anchor, amazonLink(query, key));
-    });
-    document.querySelectorAll("[data-amazon-query]").forEach((anchor) => {
-      setOutboundLink(anchor, amazonLink(anchor.dataset.amazonQuery, anchor.dataset.affiliateKey || ""));
+      document.querySelectorAll("[data-store]").forEach((anchor) => {
+        const key = anchor.dataset.affiliateKey;
+        const query = anchor.dataset.query;
+        setOutboundLink(anchor, amazonLink(query, key));
+      });
+      document.querySelectorAll("[data-amazon-query]").forEach((anchor) => {
+        setOutboundLink(anchor, amazonLink(anchor.dataset.amazonQuery, anchor.dataset.affiliateKey || ""));
+      });
     });
 
     // Count down to 19 Nov 2026. ?date=... can be used to test the post-launch state.
